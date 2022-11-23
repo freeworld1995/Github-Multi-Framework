@@ -9,12 +9,14 @@ import Foundation
 
 public protocol Requesting {
     associatedtype Response: Codable
+    associatedtype Body: Codable
     associatedtype Error
     
     var httpMethod: HTTPMethod { get }
-    var headers: [HeaderType] { get set }
+    var headers: [HeaderType] { get }
     var baseUrl: URL { get }
     var path: String { get }
+    var body: Body { get set }
     
     func asURLRequest() throws -> URLRequest
 }

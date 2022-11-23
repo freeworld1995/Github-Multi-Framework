@@ -8,7 +8,6 @@
 import SwiftUI
 
 class HomeViewModel: NSObject, ObservableObject{
-    @AppStorage("token") var token: String = ""
     private let apiClient: APIClienting
     
     init(apiClient: APIClienting = APIClient.shared) {

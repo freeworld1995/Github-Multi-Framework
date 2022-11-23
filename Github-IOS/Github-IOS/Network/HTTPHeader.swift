@@ -71,7 +71,18 @@ public struct Header : HTTPHeader {
 public enum HeaderType {
     case header(Header)
     case auth(Auth)
-    case mime(MIMEType)
+    case mime(Accept)
+    
+    func toHeader() -> HTTPHeader {
+        switch self {
+        case .header(let header):
+            return header
+        case .auth(let auth):
+            return auth
+        case .mime(let mIMEType):
+            return mIMEType
+        }
+    }
 }
 
 public extension URLRequest {

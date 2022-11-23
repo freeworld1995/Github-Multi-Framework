@@ -11,4 +11,9 @@ public struct Constants {
     struct API {
         static let baseURL = "http://github.com/"
     }
+    
+    struct UserDefaults {
+        @UserDefault(key: "token", defaultValue: "")
+        static var token: String
+    }
 }

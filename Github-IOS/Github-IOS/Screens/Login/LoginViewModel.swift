@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import AuthenticationServices
 
 protocol LoginViewModeling {
@@ -14,6 +15,7 @@ protocol LoginViewModeling {
 
 final class LoginViewModel: NSObject, ObservableObject {
     private let apiClient: APIClienting
+    var isLogin = false
     
     init(apiClient: APIClienting = APIClient.shared) {
         self.apiClient = apiClient
@@ -60,8 +62,9 @@ extension LoginViewModel: LoginViewModeling {
 
     func login() async throws {
         let code = await signIn()
-        _ = try await createAccessToken(clientId: "de8132a20056a5f3ad7b",
+        let accessToken = try await createAccessToken(clientId: "de8132a20056a5f3ad7b",
                                 clientSecret: "964e3cebf6c92c6a3a9bd185a54523c9163d06d3",
                                 code: code ?? "")
+        Constants.UserDefaults.token = accessToken.accessToken
     }
 }

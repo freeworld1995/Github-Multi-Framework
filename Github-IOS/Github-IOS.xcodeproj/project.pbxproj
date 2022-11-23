@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B06FBE3292CC4DA004668CB /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBE2292CC4DA004668CB /* UserDefault.swift */; };
+		1B06FBE6292E7951004668CB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBE5292E7951004668CB /* CardView.swift */; };
 		1B207E7729273D6000EF5221 /* Github_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B207E7629273D6000EF5221 /* Github_IOSApp.swift */; };
 		1B207E7929273D6000EF5221 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B207E7829273D6000EF5221 /* HomeView.swift */; };
 		1B207E7B29273D6100EF5221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B207E7A29273D6100EF5221 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B06FBE2292CC4DA004668CB /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		1B06FBE5292E7951004668CB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1B207E7329273D6000EF5221 /* Github-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B207E7629273D6000EF5221 /* Github_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_IOSApp.swift; sourceTree = "<group>"; };
 		1B207E7829273D6000EF5221 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B06FBE4292E7943004668CB /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				1B06FBE5292E7951004668CB /* CardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		1B207E6A29273D6000EF5221 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,7 @@
 				1B2F3E64292A0ADD009ED099 /* Screens */,
 				1B207E7A29273D6100EF5221 /* Assets.xcassets */,
 				1B207E7C29273D6100EF5221 /* Preview Content */,
+				1B06FBE2292CC4DA004668CB /* UserDefault.swift */,
 			);
 			path = "Github-IOS";
 			sourceTree = "<group>";
@@ -176,8 +189,6 @@
 			children = (
 				1B2F3E66292A1EB4009ED099 /* Login */,
 				1B2F3E65292A1EAF009ED099 /* Home */,
-				1B207E7829273D6000EF5221 /* HomeView.swift */,
-				1B4CD0E32927CB8500C20C44 /* HomeViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -185,6 +196,9 @@
 		1B2F3E65292A1EAF009ED099 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1B06FBE4292E7943004668CB /* Card */,
+				1B207E7829273D6000EF5221 /* HomeView.swift */,
+				1B4CD0E32927CB8500C20C44 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 			files = (
 				1B4CD0E22927C0FF00C20C44 /* HTTPHeader.swift in Sources */,
 				1B207E7929273D6000EF5221 /* HomeView.swift in Sources */,
+				1B06FBE3292CC4DA004668CB /* UserDefault.swift in Sources */,
 				1B4CD0E42927CB8500C20C44 /* HomeViewModel.swift in Sources */,
 				1B207E7729273D6000EF5221 /* Github_IOSApp.swift in Sources */,
 				1B2F3E5A29288F02009ED099 /* Requesting.swift in Sources */,
@@ -356,6 +371,7 @@
 				1B4CD0DD2927C0AF00C20C44 /* Endpoint.swift in Sources */,
 				1B2F3E68292A1EBF009ED099 /* LoginView.swift in Sources */,
 				1B4CD0E02927C0E700C20C44 /* HTTPMethod.swift in Sources */,
+				1B06FBE6292E7951004668CB /* CardView.swift in Sources */,
 				1B2F3E572927E86F009ED099 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
