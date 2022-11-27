@@ -8,6 +8,7 @@
 import SwiftUI
 import AuthenticationServices
 
+
 struct HomeView: View {
     @EnvironmentObject var theme: Theme
     @StateObject var viewModel = HomeViewModel()
@@ -55,11 +56,17 @@ struct HomeView: View {
                     }
                     .frame(height: 250)
                 }
+                
+                ForEach((1...10).reversed(), id: \.self) { _ in
+                    CardView()
+                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .cornerRadius(24)
+                }
             }
             .coordinateSpace(name: "scrollview")
             .background(Color.brown)
         }
-        .background(Color("background").ignoresSafeArea())
+        .background(Color.background.ignoresSafeArea())
     }
 }
 
