@@ -56,12 +56,16 @@ struct HomeView: View {
                     }
                     .frame(height: 250)
                 }
-                
-                ForEach((1...10).reversed(), id: \.self) { _ in
-                    CardView()
-                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                        .cornerRadius(24)
+                .overlay {
+                    ForEach((1...10).reversed(), id: \.self) { _ in
+                        CardView()
+                            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                            .cornerRadius(24)
+                    }
+                    .border(.red)
                 }
+                
+                
             }
             .coordinateSpace(name: "scrollview")
             .background(Color.brown)
