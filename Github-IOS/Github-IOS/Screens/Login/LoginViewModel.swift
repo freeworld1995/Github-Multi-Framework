@@ -31,13 +31,13 @@ extension LoginViewModel: ASWebAuthenticationPresentationContextProviding {
 
 // MARK: - LoginViewModeling
 extension LoginViewModel: LoginViewModeling {
-    func signIn() async -> String? {
-        await withCheckedContinuation { continuation in
+    func signIn() async throws -> String? {
+        try await withCheckedThrowingContinuation { continuation in
             let url = URL(string: "http://github.com/login/oauth/authorize?client_id=de8132a20056a5f3ad7b&scope=repo")!
             let session = ASWebAuthenticationSession(url: url, callbackURLScheme: nil) { url, error in
                 if let error = error {
                     Logger.shared.network(error.localizedDescription)
-                    continuation.resume(returning: nil)
+                    return continuation.resume(throwing: error)
                 }
                 let oauthToken = NSURLComponents(string: (url?.absoluteString)!)?.queryItems?.filter({$0.name == "code"}).first
                 continuation.resume(returning: oauthToken?.value)
@@ -61,7 +61,7 @@ extension LoginViewModel: LoginViewModeling {
     }
 
     func login() async throws {
-        let code = await signIn()
+        let code = try await signIn()
         let accessToken = try await createAccessToken(clientId: "de8132a20056a5f3ad7b",
                                 clientSecret: "964e3cebf6c92c6a3a9bd185a54523c9163d06d3",
                                 code: code ?? "")

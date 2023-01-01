@@ -18,7 +18,3 @@ public struct Constants {
         static var token: String
     }
 }
-
-class TestDelegate: NSObject, UICollectionViewDelegate {
-    
-}
