@@ -10,6 +10,7 @@ import SwiftUI
 extension Color {
     static let star: Color = Color("yellow")
     static let card: Color = Color("card")
+    static let text: Color = Color("text")
     static let background: Color = Color("background")
 }
 
@@ -77,6 +78,7 @@ struct CardView: View {
         }
         .fullscreen()
         .background(Color("background"))
+        .frame(maxHeight: 300)
     }
 }
 

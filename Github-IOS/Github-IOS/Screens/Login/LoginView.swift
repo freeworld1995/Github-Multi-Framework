@@ -11,6 +11,14 @@ struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
+        if viewModel.isLogin {
+            HomeView()
+        } else {
+            loginView
+        }
+    }
+    
+    @ViewBuilder private var loginView: some View {
         VStack {
             Button {
                 Task {
@@ -26,13 +34,12 @@ struct LoginView: View {
                 }
                 .padding(.init(top: 10, leading: 20, bottom: 10, trailing: 20))
             }
-            .background(Color("text"))
+            .background(Color.text)
             .cornerRadius(20)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("background"))
-        .border(.red)
+        .background(Color.background)
         .ignoresSafeArea()
     }
 }

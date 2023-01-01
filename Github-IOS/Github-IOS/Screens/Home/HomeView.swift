@@ -44,7 +44,6 @@ struct HomeView: View {
                     // Paralax header
                     GeometryReader { reader -> AnyView in
                         let offset = reader.frame(in: .named("scrollview")).minY
-                        print(offset)
                         return AnyView(
                             Image("user")
                                 .resizable()
@@ -56,19 +55,21 @@ struct HomeView: View {
                     }
                     .frame(height: 250)
                 }
-                .overlay {
-                    ForEach((1...10).reversed(), id: \.self) { _ in
-                        CardView()
-                            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                            .cornerRadius(24)
-                    }
-                    .border(.red)
+                
+                ForEach((1...10).reversed(), id: \.self) { _ in
+                    CardView()
+                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .cornerRadius(24)
                 }
-                
-                
+                .border(.red)
             }
             .coordinateSpace(name: "scrollview")
             .background(Color.brown)
+            .onAppear {
+                Task {
+                    try await viewModel.fetchRepositories(forceReload: true)
+                }
+            }
         }
         .background(Color.background.ignoresSafeArea())
     }

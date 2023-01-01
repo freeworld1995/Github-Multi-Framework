@@ -13,6 +13,7 @@
 		1B06FBEA29335177004668CB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBE929335177004668CB /* TestView.swift */; };
 		1B06FBEC293353C5004668CB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBEB293353C5004668CB /* Repository.swift */; };
 		1B06FBEE2933550E004668CB /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBED2933550E004668CB /* RepoOwner.swift */; };
+		1B06FBF029335796004668CB /* RepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06FBEF29335796004668CB /* RepositoryRequest.swift */; };
 		1B207E7729273D6000EF5221 /* Github_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B207E7629273D6000EF5221 /* Github_IOSApp.swift */; };
 		1B207E7929273D6000EF5221 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B207E7829273D6000EF5221 /* HomeView.swift */; };
 		1B207E7B29273D6100EF5221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B207E7A29273D6100EF5221 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		1B06FBE929335177004668CB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1B06FBEB293353C5004668CB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		1B06FBED2933550E004668CB /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
+		1B06FBEF29335796004668CB /* RepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequest.swift; sourceTree = "<group>"; };
 		1B207E7329273D6000EF5221 /* Github-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B207E7629273D6000EF5221 /* Github_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_IOSApp.swift; sourceTree = "<group>"; };
 		1B207E7829273D6000EF5221 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				1B2F3E61292A080D009ED099 /* GithubAccessTokenRequest.swift */,
+				1B06FBEF29335796004668CB /* RepositoryRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				1B2F3E62292A080D009ED099 /* GithubAccessTokenRequest.swift in Sources */,
 				1B2F3E602929E9F9009ED099 /* Logger.swift in Sources */,
 				1B4CD0DD2927C0AF00C20C44 /* Endpoint.swift in Sources */,
+				1B06FBF029335796004668CB /* RepositoryRequest.swift in Sources */,
 				1B2F3E68292A1EBF009ED099 /* LoginView.swift in Sources */,
 				1B4CD0E02927C0E700C20C44 /* HTTPMethod.swift in Sources */,
 				1B06FBE6292E7951004668CB /* CardView.swift in Sources */,

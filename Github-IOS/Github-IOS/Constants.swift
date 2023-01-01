@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Constants {
     struct API {
@@ -16,4 +17,8 @@ public struct Constants {
         @UserDefault(key: "token", defaultValue: "")
         static var token: String
     }
+}
+
+class TestDelegate: NSObject, UICollectionViewDelegate {
+    
 }

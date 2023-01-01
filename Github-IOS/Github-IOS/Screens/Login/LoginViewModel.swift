@@ -15,7 +15,7 @@ protocol LoginViewModeling {
 
 final class LoginViewModel: NSObject, ObservableObject {
     private let apiClient: APIClienting
-    var isLogin = false
+    @Published var isLogin = false
     
     init(apiClient: APIClienting = APIClient.shared) {
         self.apiClient = apiClient
@@ -66,5 +66,11 @@ extension LoginViewModel: LoginViewModeling {
                                 clientSecret: "964e3cebf6c92c6a3a9bd185a54523c9163d06d3",
                                 code: code ?? "")
         Constants.UserDefaults.token = accessToken.accessToken
+        
+        Task {
+            await MainActor.run  {
+                isLogin = true
+            }
+        }
     }
 }

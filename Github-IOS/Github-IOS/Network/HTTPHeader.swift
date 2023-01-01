@@ -32,6 +32,7 @@ public enum Auth : HTTPHeader {
 
 public enum MIMEType : String {
     case json = "application/json"
+    case githubJson = "application/vnd.github+json"
     case xml = "application/xml"
     case urlencoded = "application/x-www-form-urlencoded"
 }

@@ -9,8 +9,8 @@ import Foundation
 
 public protocol Requesting {
     associatedtype Response: Codable
-    associatedtype Body: Codable
     associatedtype Error
+    associatedtype Body: Codable
     
     var httpMethod: HTTPMethod { get }
     var headers: [HeaderType] { get }
