@@ -24,7 +24,9 @@ class HomeViewModel: NSObject, ObservableObject {
 extension HomeViewModel: HomeViewModeling {
     func fetchRepositories(forceReload: Bool) async throws -> [Repository] {
         if forceReload {
-            repositories = []
+            await MainActor.run {
+                repositories = []
+            }
             pagination = Pagination(page: 1, perPage: 5)
         }
         

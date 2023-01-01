@@ -15,7 +15,7 @@ protocol LoginViewModeling {
 
 final class LoginViewModel: NSObject, ObservableObject {
     private let apiClient: APIClienting
-    @Published var isLogin = false
+    @Published var isLogin = Constants.UserDefaults.token != nil
     
     init(apiClient: APIClienting = APIClient.shared) {
         self.apiClient = apiClient

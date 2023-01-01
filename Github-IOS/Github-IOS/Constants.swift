@@ -14,7 +14,7 @@ public struct Constants {
     }
     
     struct UserDefaults {
-        @UserDefault(key: "token", defaultValue: "")
-        static var token: String
+        @UserDefault(key: "token", defaultValue: nil)
+        static var token: String?
     }
 }

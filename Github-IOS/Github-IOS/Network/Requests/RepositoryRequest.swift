@@ -28,7 +28,7 @@ struct RepositoryRequest: Requesting {
     
     var headers: [HeaderType] {
         [.mime(.init(.githubJson)),
-         .auth(.bearer(token: Constants.UserDefaults.token))]
+         .auth(.bearer(token: Constants.UserDefaults.token ?? "Unknown"))]
     }
     
     var baseUrl: URL {
